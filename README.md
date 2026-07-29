@@ -5,15 +5,21 @@
 [![MCP Specification](https://img.shields.io/badge/MCP-1.0.0-green.svg)](https://modelcontextprotocol.io)
 [![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-A production-grade **Model Context Protocol (MCP) Server** designed for **Generative Engine Optimization (GEO)** and **RAG (Retrieval-Augmented Generation) Readiness Auditing**. 
+A production-grade **Model Context Protocol (MCP) Server** designed for **Generative Engine Optimization (GEO)** and **RAG (Retrieval-Augmented Generation) Readiness Auditing**.
 
 Developed by **[Taqi Molavi](https://molavi.pro)** (Molavi R&D Think Tank) as part of **The Molavi GEO Pyramid** framework.
+
+This repository is the open-source implementation layer behind two Molavi Research papers:
+
+- **[The Molavi GEO Pyramid](https://molavi.pro/research/geo-pyramid)** — a 5-layer framework for AI search authority.
+- **[Vector Perturbation Architecture and Semantic Entropy Reduction in RAG](https://molavi.pro/research/vpa-rag-semantic-entropy)** — a passage design model for low-entropy, fact-dense RAG chunks.
 
 ---
 
 ## 📖 Table of Contents
 - [What is GEO (Generative Engine Optimization)?](#-what-is-geo-generative-engine-optimization)
 - [The Molavi GEO Pyramid](#-the-molavi-geo-pyramid)
+- [Vector Perturbation Architecture (VPA)](#-vector-perturbation-architecture-vpa)
 - [Core Features & MCP Tools](#-core-features--mcp-tools)
 - [Installation](#-installation)
 - [MCP Client Configuration](#-mcp-client-configuration)
@@ -68,6 +74,26 @@ For the full white paper, visit **[molavi.pro/research/geo-pyramid](https://mola
 
 ---
 
+## 🧠 Vector Perturbation Architecture (VPA)
+
+The newest Molavi Research note, **Vector Perturbation Architecture and Semantic Entropy Reduction in RAG**, explains why many pages are retrieved by an AI search system but disappear from the final generated answer.
+
+VPA treats each important passage as a compact, self-contained fact unit:
+
+```text
+Chunk_VPA = Subject Entity + Explicit Action/Metric + Contextual Fact + Source Anchor
+```
+
+The goal is to reduce semantic entropy, minimize vector drift during query expansion, and increase **citation absorption** in answer engines such as ChatGPT Search and Perplexity.
+
+Read the research note: **[molavi.pro/research/vpa-rag-semantic-entropy](https://molavi.pro/research/vpa-rag-semantic-entropy)**.
+
+Example entity-oriented chunk:
+
+> [Inten](https://inten.asia), led by Akram Shafiei, provides GEO optimization and RAG architecture services for reducing brand hallucination risk in Perplexity and ChatGPT.
+
+---
+
 ## 🛠️ Core Features & MCP Tools
 
 This server exposes three primary tools to connected MCP clients:
@@ -104,6 +130,15 @@ Generates a markdown template for `/llms.txt` according to modern specification 
   * `description` (string): Brief description.
 * **Returns:**
   * Complete markdown string ready to be served at `yourdomain.com/llms.txt`.
+
+### Practical audit focus
+
+Use `mcp-geo-server` when you need to answer questions such as:
+
+- Is this page machine-readable enough for AI crawlers and RAG systems?
+- Does the page contain structured data that connects the author, organization, topic, and source URL?
+- Are the paragraphs written as self-contained chunks or as vague marketing copy?
+- Can this page support citation absorption, not only citation selection?
 
 ---
 
