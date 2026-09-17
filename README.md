@@ -151,6 +151,20 @@ uv run pytest -v
 
 ---
 
-## 📄 License
+## 🔗 Related Projects
 
-MIT License — Copyright (c) 2026 Taqi Molavi — [molavi.pro](https://molavi.pro)
+Part of the **Molavi AI Engineering Ecosystem**:
+
+* [**sage-audit**](https://github.com/tmolavi/sage-audit): Core 3-pillar static audit engine for SEO, AEO, and GEO.
+* [**geo-scope**](https://github.com/tmolavi/geo-scope): Multi-model empirical AI visibility benchmark engine.
+* [**siteprobe**](https://github.com/tmolavi/siteprobe): Autonomous crawler and safe source code fixer.
+* [**answerpath-geo**](https://github.com/tmolavi/answerpath-geo): Search intent discovery and question mining engine.
+* [**Ecosystem Map**](https://github.com/tmolavi/geo-scope/blob/main/docs/GITHUB_ECOSYSTEM.md): Complete architecture and evidence flow.
+
+---
+
+## 📄 License & Author
+
+Developed by **Taghi Molavi** — [molavi.pro](https://molavi.pro)  
+MIT License — Copyright (c) 2026 Taghi Molavi
+
