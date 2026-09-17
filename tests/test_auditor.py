@@ -154,3 +154,34 @@ def test_measure_mavi_manual_override_mode():
     assert res["layers"]["L1"]["score"] == 80.0
     assert res["mavi_score"] is not None
 
+
+def test_measure_mavi_strict_delegation_deduplication(monkeypatch):
+    """Verify that GEOAuditor.measure_mavi strictly delegates to canonical geo_scope.mavi.MAVIEngine."""
+    import mcp_geo_server.auditor as auditor_module
+    from geo_scope.mavi.engine import MAVIEngine
+    from geo_scope.mavi.models import MAVIReport
+
+    # Verify MCP auditor module does NOT define duplicate internal calculation helpers
+    assert not hasattr(auditor_module, "DEFAULT_WEIGHTS")
+    assert not hasattr(auditor_module.GEOAuditor, "_build_l1_layer")
+    assert not hasattr(auditor_module.GEOAuditor, "_build_l5_layer")
+    assert not hasattr(auditor_module.GEOAuditor, "_assess_confidence")
+
+    # Verify delegation call flow
+    called = False
+    original_measure = MAVIEngine.measure
+
+    def spy_measure(self, *args, **kwargs):
+        nonlocal called
+        called = True
+        return original_measure(self, *args, **kwargs)
+
+    monkeypatch.setattr(MAVIEngine, "measure", spy_measure)
+
+    res = GEOAuditor.measure_mavi(html_content=SAMPLE_HTML, target_brand="Taqi Molavi")
+    assert called is True
+    assert isinstance(res, dict)
+    assert "mavi_score" in res
+    assert res["measured_layers_count"] == 4
+
+
