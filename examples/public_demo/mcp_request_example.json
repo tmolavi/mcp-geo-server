@@ -1,0 +1,12 @@
+{
+  "jsonrpc": "2.0",
+  "id": "req-001",
+  "method": "tools/call",
+  "params": {
+    "name": "audit_full",
+    "arguments": {
+      "url": "https://web24.ir",
+      "html_content": "<!DOCTYPE html><html><head><title>Web24</title><link rel='canonical' href='https://web24.ir'/></head><body><h1>Web24 Digital Marketing</h1></body></html>"
+    }
+  }
+}

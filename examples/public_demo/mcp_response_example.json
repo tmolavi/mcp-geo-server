@@ -1,0 +1,13 @@
+{
+  "jsonrpc": "2.0",
+  "id": "req-001",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"status\": \"success\",\n  \"url\": \"https://web24.ir\",\n  \"composite_score\": 85.0,\n  \"pillars\": {\n    \"technical_seo\": {\"score\": 90.0},\n    \"entity_aeo\": {\"score\": 80.0},\n    \"generative_geo\": {\"score\": 85.0}\n  }\n}"
+      }
+    ],
+    "isError": false
+  }
+}
