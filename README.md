@@ -68,7 +68,15 @@ AI Agent / Claude Desktop / Cursor / Antigravity
 
 ---
 
-## 📊 Evidence Taxonomy & CSP Diagnostics
+## 📊 Evidence & Agent Tool Integration
+
+- **MCP Client Demonstration Script**: [`examples/mcp_client_example.py`](examples/mcp_client_example.py)
+- **Standalone Offline JSON-RPC Demo**: [`examples/public_demo/`](examples/public_demo/)
+- **5-Layer MAVI Integration Specification**: [`docs/mavi-methodology.md`](docs/mavi-methodology.md)
+- **Ecosystem Data Flow & Contracts**: [`docs/BENCHMARK_ECOSYSTEM.md`](docs/BENCHMARK_ECOSYSTEM.md)
+- **Cross-Repository Evidence Map**: [Ecosystem Evidence Flow](https://github.com/tmolavi/geo-scope/blob/main/docs/EVIDENCE_MAP.md)
+
+## Evidence Taxonomy & CSP Diagnostics
 
 Every finding and metric exposed by `mcp-geo-server` carries SAGE Evidence Taxonomy levels to guarantee transparency:
 
