@@ -16,7 +16,6 @@ classifiers = [
 ]
 dependencies = [
     "mcp>=1.0.0",
-    "sage-audit>=1.0.0",
     "beautifulsoup4>=4.12.0",
     "pydantic>=2.0.0",
     "requests>=2.31.0"
@@ -24,6 +23,9 @@ dependencies = [
 requires-python = ">=3.10"
 
 [project.optional-dependencies]
+sage = [
+    "sage-audit>=1.0.0"
+]
 dev = [
     "pytest>=8.0.0",
     "pytest-asyncio>=0.23.0"
