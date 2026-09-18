@@ -176,6 +176,16 @@ Run the bundled MCP adapter example script:
 python examples/mcp_client_example.py
 ```
 
+## 💬 Community & External Collaboration
+
+We welcome contributions to MCP tool definitions, AI agent bindings, and transport protocols:
+
+- **Discussions**: [GitHub Discussions](https://github.com/tmolavi/mcp-geo-server/discussions)
+- **First Contribution Guide**: [`docs/FIRST_CONTRIBUTION.md`](docs/FIRST_CONTRIBUTION.md)
+- **MAVI Integration Specs**: [`docs/mavi-methodology.md`](docs/mavi-methodology.md)
+- **Report Issues**: [GitHub Issues](https://github.com/tmolavi/mcp-geo-server/issues)
+- **Contribution Standards**: [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`SECURITY.md`](SECURITY.md)
+
 ---
 
 ## 📄 License & Author
