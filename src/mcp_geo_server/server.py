@@ -320,7 +320,12 @@ def generate_llms_txt_template(domain: str, title: str, description: str) -> str
     return template
 
 
-if __name__ == "__main__":
+def main() -> None:
+    """CLI entrypoint for mcp-geo-server."""
     if not SAGE_AVAILABLE:
         logger.warning("Starting mcp-geo-server without SAGE installed. Tools will return engine errors.")
     app.run("stdio")
+
+
+if __name__ == "__main__":
+    main()

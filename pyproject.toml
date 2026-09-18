@@ -29,6 +29,13 @@ dev = [
     "pytest-asyncio>=0.23.0"
 ]
 
+[project.scripts]
+mcp-geo-server = "mcp_geo_server.server:main"
+
 [project.urls]
 Homepage = "https://molavi.pro/research/geo-pyramid"
-Repository = "https://github.com/taqimolavi/mcp-geo-server"
+Repository = "https://github.com/tmolavi/mcp-geo-server"
+Issues = "https://github.com/tmolavi/mcp-geo-server/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
