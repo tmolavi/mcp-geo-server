@@ -1,0 +1,24 @@
+name: Bug report
+description: Create a report to help us improve
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting an issue with MCP GEO Server!
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the error or protocol failure
+      placeholder: Describe the issue...
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: MCP client configuration and tool call payload
+      placeholder: |
+        1. Start MCP server `uv run mcp-geo-server`
+        2. Call tool `audit_url`...
+    validations:
+      required: true

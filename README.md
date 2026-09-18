@@ -151,15 +151,22 @@ uv run pytest -v
 
 ---
 
-## 🔗 Related Projects
+## 🏛️ Ecosystem
 
-Part of the **Molavi AI Engineering Ecosystem**:
+MCP GEO Server operates as the protocol integration component of the **Molavi AI Visibility Stack**:
 
-* [**sage-audit**](https://github.com/tmolavi/sage-audit): Core 3-pillar static audit engine for SEO, AEO, and GEO.
-* [**geo-scope**](https://github.com/tmolavi/geo-scope): Multi-model empirical AI visibility benchmark engine.
-* [**siteprobe**](https://github.com/tmolavi/siteprobe): Autonomous crawler and safe source code fixer.
-* [**answerpath-geo**](https://github.com/tmolavi/answerpath-geo): Search intent discovery and question mining engine.
-* [**Ecosystem Map**](https://github.com/tmolavi/geo-scope/blob/main/docs/GITHUB_ECOSYSTEM.md): Complete architecture and evidence flow.
+- **Discovery**: [AnswerPath GEO](https://github.com/tmolavi/answerpath-geo)
+- **Measurement**: [GEO-Scope](https://github.com/tmolavi/geo-scope)
+- **Diagnostics**: [SAGE Audit](https://github.com/tmolavi/sage-audit)
+- **Action**: [SiteProbe](https://github.com/tmolavi/siteprobe)
+- **Protocol**: [MCP GEO Server](https://github.com/tmolavi/mcp-geo-server)
+
+## 📖 Runnable Python Client Example
+
+Run the bundled MCP adapter example script:
+```bash
+python examples/mcp_client_example.py
+```
 
 ---
 
